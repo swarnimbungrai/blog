@@ -19,6 +19,15 @@ app.get('/title',(req, res) => {
  
  app.post('/title', regLog); //API
 
+ app.get('/home',async(req, res) => {
+    const blogss = await blogs.findAll()
+    console.log(blogss)
+    res.render('home',{blogss}); //fileName
+ });
+
+
+
+ 
  app.listen(4000,()=>{
     console.log("server started at ports 4000")
 }); 

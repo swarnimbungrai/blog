@@ -10,9 +10,9 @@ exports.regLog = async (req, res) => {
       subTitle: subTitle,
       description: desc,
 
-      //password:bcrypt.hashSync(regPsw,10) //day4 hashing psw
+      
 
 })
  console.log(title,subTitle, desc)
- res.redirect('/title')
+ res.redirect('home')
 }

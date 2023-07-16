@@ -30,7 +30,7 @@ db.sequelize = sequelize;
 db.blogs = require("./blogModel.js")(sequelize, DataTypes)
 
 
-db.sequelize.sync({ force: false }).then(() => {
+db.sequelize.sync({ force: false }).then(() => {  //if it done TRUE it removes table unless it is set FALSE
   console.log("yes re-sync done");
 });
 

@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .container{
+    height: 100vh;
+    width: 100%;
+    background-color: #1d2f3c;
+    display: flex;
+    
+  }
+        .lolo{
+        width: 170px;
+        margin-left: 20px;
+        margin-top: 30px;
+        position: relative; 
+        padding-left: 15px;
+        background-color: rgb(255, 255, 255);
+        height: 280px;
+        border-radius: 10px;
+      }
+      .registerName, .registerEmail, .regPassword{
+        border:0; padding:2px 0; border-bottom:1px solid; size: 70; width: 150px;
+      } 
+      
+     
+
+      
+
+    </style>
+</head>
+<body>
+ 
+    <div class="container">
+    <% blogss.forEach((title) => {%>
+    <div class = "lolo">
+    <h3>
+   <%- title.title %>
+    </h3>
+    <br><br>
+    <h3>
+   <%- title.subTitle %>
+    </h3>
+    <br><br>
+    <h3>
+        <%- title.description %>
+    </h3>
+    <br><br>
+</div>
+
+   <%}) %> 
+
+</body>
+
+</html> 
