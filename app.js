@@ -25,7 +25,11 @@ app.get('/title',(req, res) => {
     res.render('home',{blogss}); //fileName
  });
 
-
+app.get('/home/:id',(req,res) => {
+   res.render('test')
+   
+   console.log(req.params.id)
+});
 
  
  app.listen(4000,()=>{

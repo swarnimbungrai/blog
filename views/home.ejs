@@ -7,25 +7,31 @@
     <title>Document</title>
     <style>
       .container{
-    height: 100vh;
-    width: 100%;
+    /* height: 100vh;
+    width: 100%; */
     background-color: #1d2f3c;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding:20px;
     
   }
         .lolo{
-        width: 170px;
+        width: 200px;
         margin-left: 20px;
         margin-top: 30px;
         position: relative; 
         padding-left: 15px;
         background-color: rgb(255, 255, 255);
-        height: 280px;
+        height: 220px;
         border-radius: 10px;
       }
-      .registerName, .registerEmail, .regPassword{
-        border:0; padding:2px 0; border-bottom:1px solid; size: 70; width: 150px;
-      } 
+
+      .h3{
+        color:rgb(116, 116, 116);
+      }
+      
       
      
 
@@ -34,25 +40,31 @@
     </style>
 </head>
 <body>
- 
+
+    <ul>
     <div class="container">
     <% blogss.forEach((title) => {%>
     <div class = "lolo">
-    <h3>
+    <h2>
    <%- title.title %>
-    </h3>
-    <br><br>
+    </h2>
+    <div class=" h3">
     <h3>
    <%- title.subTitle %>
     </h3>
-    <br><br>
-    <h3>
+    </div>
+    
+    <p>
         <%- title.description %>
-    </h3>
-    <br><br>
+    </p>
+    <button>
+      <!-- title page ko title id show greko  -->
+    <a href="/title/<%- title.id %>">See More</a>  
+    </button>
 </div>
 
    <%}) %> 
+</ul>
 
 </body>
 
