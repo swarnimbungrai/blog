@@ -43,23 +43,23 @@
 
     <ul>
     <div class="container">
-    <% blogss.forEach((title) => {%>
+    <% blogss.forEach((titl) => {%>
     <div class = "lolo">
     <h2>
-   <%- title.title %>
+   <%- titl.title %>
     </h2>
     <div class=" h3">
     <h3>
-   <%- title.subTitle %>
+   <%- titl.subTitle %>
     </h3>
     </div>
     
     <p>
-        <%- title.description %>
+        <%- titl.description %>
     </p>
     <button>
       <!-- title page ko title id show greko  -->
-    <a href="/title/<%- title.id %>">See More</a>  
+    <a href="/title/<%- titl.id %>">See More</a>  
     </button>
 </div>
 

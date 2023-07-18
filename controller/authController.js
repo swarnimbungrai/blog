@@ -10,9 +10,13 @@ exports.regLog = async (req, res) => {
       subTitle: subTitle,
       description: desc,
 
-      
-
 })
  console.log(title,subTitle, desc)
  res.redirect('home')
 }
+
+
+  
+ 
+  
+  

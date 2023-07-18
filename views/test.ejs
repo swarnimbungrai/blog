@@ -6,10 +6,61 @@
     <meta name="viewport" content="width=>, initial-scale=1.0">
     <title>Document</title>
     <style>
-        </style>
-        <body>
-            <h1>lolo</h1>
-            
-        </body>
-        
-        </html>
+      .container{
+    /* height: 100vh;
+    width: 100%; */
+    background-color: #1d2f3c;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding:20px;
+    
+  }
+        .lolo{
+        width: 200px;
+        margin-left: 20px;
+        margin-top: 30px;
+        position: relative; 
+        padding-left: 15px;
+        background-color: rgb(255, 255, 255);
+        height: 220px;
+        border-radius: 10px;
+      }
+
+      .h3{
+        color:rgb(116, 116, 116);
+      }
+      
+      
+     
+
+      
+
+    </style>
+</head>
+<body>
+
+    <ul>
+    <div class="container">
+    
+    <div class = "lolo">
+    <h2>
+   <%- blogS[0].title %>
+    </h2>
+    <div class=" h3">
+    <h3>
+   <%- blogS[0].subTitle %>
+    </h3>
+    </div>
+    <%- blogS[0].description %>
+   
+   
+</div>
+
+ 
+</ul>
+
+</body>
+
+</html> 

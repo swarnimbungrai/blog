@@ -8,6 +8,7 @@ const {sequelize, blogs} = require ('./model')
 
 const bcrypt = require("bcrypt");//day4
 const { regLog } = require('./controller/authController');
+const { logID } = require('./controller/authController');
 
 app.use(express.json())
 app.use(express.urlencoded ({extended:true}))
@@ -25,11 +26,18 @@ app.get('/title',(req, res) => {
     res.render('home',{blogss}); //fileName
  });
 
-app.get('/home/:id',(req,res) => {
-   res.render('test')
-   
-   console.log(req.params.id)
+app.get('/title/:id',async(req,res) => {
+   const blogS = await blogs.findAll(
+      {where:{
+         id: req.params.id}
+      }
+   ,);
+   console.log(blogS)
+   res.render('test',{blogS});
+   //console.log(req.params.id)
+
 });
+//app.post('/title');
 
  
  app.listen(4000,()=>{
